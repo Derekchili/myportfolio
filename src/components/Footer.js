@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className='flex flex-grow justify-center m-4 h-screen bg-blue-400'>
       <ul>
         <li>
           <span>Github:</span>

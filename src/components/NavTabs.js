@@ -1,37 +1,24 @@
-import { NavLink } from 'react-router-dom';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function NavTabs(){
-  const pages ={
-    Home: '/Home',
-    Project: '/Projects',
-    Contact: '/Contact',
-    AboutMe: '/AboutMe',
-    Resume: '/Resume'
-  };
-  return (
-    <header className='flex-full-row'>
-    <nav className='bg-light-blue border-2 border-black'>
-      <ul className='flex-full-row'>
-        {Object.keys(pages).map((key, index) => {
-          return (
-            <li key={index} className='ml-10 my-2'>
-              <NavLink
-                to={pages[key]}
-                
-                className={({ isActive }) => (isActive ? '' : '' )}>
-                {key}
-              </NavLink>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-    </header>
+  return(
+    <ul className='nav nav-tabs flex flex-grow justify-center m-4 h-screen bg-blue-400'>
+      <li className='nav-item px-5'>
+        <Link to='/'>Home</Link>
+      </li>
+      <li className='nav-item px-5'>
+        <Link to='/Projects'>Projects</Link>
+      </li>
+      <li className='nav-item px-5'>
+        <Link to='/Contact'>Contact</Link>
+      </li>
+      <li className='nav-item px-5'>
+        <Link to='/AboutMe'>About Me</Link>
+      </li>
+      <li className='nav-item px-5'>
+        <Link to='/Resume'>Resume</Link>
+      </li>
+    </ul>
   );
 }
-
-
-
-
-

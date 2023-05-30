@@ -25,9 +25,8 @@ export default function Home(){
       ];
       
     return(
-    <section>
-        <h1>Projects</h1>
-        <section>
+    <section className='h-full'>
+        <section className="bg-blue-400 text-white font-bold py-1 px-2 border border-blue-700 rounded w-20">
             {Object.keys(projects).map((key, index)=>{
             return(
                 <article key={index}>
