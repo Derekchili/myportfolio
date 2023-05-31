@@ -31,39 +31,36 @@ export default function Contact() {
   }
 
   return (
-    <section>
-      <h1>
-        Contact
-      </h1>
-      <form
-        
-        onSubmit={handleSubmit}
-      >
-        <textarea value={text} onChange={handleChangeText}/>
-        <input
-          name="name"
-          placeholder="Name"
-          type="text"
-          value={name}
-          onChange={handleChangeName}
-        
-        />
-        <input
-          name="email"
-          placeholder="Email"
-          type="email"
-          value={email}
-          onChange={handleChangeEmail}
-          
-        />
-
-        <button
-          
-          onClick={handleSubmit}
-        >
-          Submit
-        </button>
-      </form>
-    </section>
-  );
+    <section className="flex flex-col items-center">
+  <h1 className="text-3xl border-3 border-4 border-gray-700 rounded-lg shadow-lg bg-grey-300 hover:font-bold hover:bg-blue-400 text-xl font-medium hover:text-2xl">Contact</h1>
+  <form className="flex flex-col items-center px-5 border-4 border-gray-700 rounded-lg shadow-lg bg-grey-300 hover:font-bold hover:bg-blue-400 text-xl font-medium hover:text-2xl" onSubmit={handleSubmit}>
+    <textarea
+      className="my-2 px-5 border-4 border-gray-700 rounded-lg shadow-lg bg-grey-300 hover:font-bold hover:bg-blue-200 text-xl font-medium hover:text-2xl"
+      name="yourself"
+      placeholder="Tell me about you!"
+      value={text}
+      onChange={handleChangeText}
+    />
+    <input
+      className="my-2 px-5 border-4 border-gray-700 rounded-lg shadow-lg bg-grey-300 hover:font-bold hover:bg-blue-200 text-xl font-medium hover:text-2xl"
+      name="name"
+      placeholder="Name"
+      type="text"
+      value={name}
+      onChange={handleChangeName}
+    />
+    <input
+      className="my-2 px-5 border-4 border-gray-700 rounded-lg shadow-lg bg-grey-300 hover:font-bold hover:bg-blue-200 text-xl font-medium hover:text-2xl"
+      name="email"
+      placeholder="Email"
+      type="email"
+      value={email}
+      onChange={handleChangeEmail}
+    />
+    <button className="my-2" onClick={handleSubmit}>
+      Submit
+    </button>
+  </form>
+</section>
+  )
 }

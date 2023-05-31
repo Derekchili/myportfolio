@@ -10,17 +10,15 @@ import Footer from "./Footer";
 import NavTabs from './NavTabs'
 
 
-
-
 function App() {
   return (
-    <div className='flex flex-grow justify-center m-4 h-screen bg-blue-200'>
+    <div className='flex flex-col px-5 py-1 h-screen bg-gradient-to-r from-blue-500 to-grey-900 '>
       <BrowserRouter>
-        <header className='flex justify-center m4 bg-blue-400'>         
+        <header className='h-20 justify-center m4 bg-gradient-to-r from-blue-500 to-grey-900'>         
           <NavTabs />
         </header>
     
-        <main className='flex justify-center h-full'>
+        <main className='h-full'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/AboutMe" element={<AboutMe />} />
