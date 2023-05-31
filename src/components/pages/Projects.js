@@ -1,26 +1,35 @@
+import glance from '../images/@aglance.png';
+import book from '../images/bookfinder.png';
+import weather from '../images/weatherapp.png';
+import team from '../images/teamgenerator.png';
+import social from '../images/socialnetwork.png';
 
-
-export default function Home(){
+export default function Projects(){
     const projects = [
         {
           name: '@ a Glance',
-          link: 'https://projectfirst.herokuapp.com/'
+          link: 'https://projectfirst.herokuapp.com/',
+          screenshot: glance
         },
         {
           name: 'Book-Finder',
-          link: 'https://github.com/Derekchili/book-finder-group5.git'
+          link: 'https://github.com/Derekchili/book-finder-group5.git',
+          screenshot: book
         },
         {
           name: 'Weather App',
-          link: 'https://github.com/Derekchili/dereks-weather-app.git'
+          link: 'https://github.com/Derekchili/dereks-weather-app.git',
+          screenshot: weather
         },
         {
           name: 'Team Profile Generator',
-          link: 'https://github.com/Derekchili/Team-profile-generator.git'
+          link: 'https://github.com/Derekchili/Team-profile-generator.git',
+          screenshot: team
         },
         {
           name: 'Social Network DB',
-          link: 'https://github.com/Derekchili/Social-NetworkDC.git'
+          link: 'https://github.com/Derekchili/Social-NetworkDC.git',
+          screenshot: social
         }
       ];
       
@@ -31,10 +40,10 @@ export default function Home(){
 
             {projects.map((key, index)=>{
             return(
-                <article key={index} class="flex justify-center w-1/4 h-1/4 m-3 border-4 border-gray-700 rounded-lg shadow-lg bg-grey-300 hover:font-bold hover:bg-blue-400 text-xl font-medium hover:text-2xl"
+                <article key={index} style={{backgroundImage: `url(${key.screenshot})`, backgroundSize: 'cover'}}class="flex justify-center max-width-30 w-1/4 h-1/4 m-3 border-4 border-gray-700 rounded-lg shadow-lg bg-grey-300 hover:font-bold hover:bg-blue-400 text-xl text-pink-500 font-medium hover:text-2xl"
                 >
                 <a className="flex grow place-content-center items-center" 
-                href={key.link}>
+                href={key.link} target='_blank'>
                 {key.name}
                 </a>
                 </article>

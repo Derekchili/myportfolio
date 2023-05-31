@@ -7,7 +7,8 @@ import Projects from './pages/Projects'
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 import Footer from "./Footer";
-import NavTabs from './NavTabs'
+import NavTabs from './NavTabs';
+import MyPortfolio from './pages/MyPortfolio';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <main className='h-full'>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/MyPortfolio" element={<MyPortfolio />} />
             <Route path="/AboutMe" element={<AboutMe />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Projects" element={<Projects />} />
